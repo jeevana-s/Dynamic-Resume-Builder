@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"/> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+        <title>Animated Resume Builder</title> 
+        <link rel="stylesheet" href="style.css"/> 
+    </head> 
+    <body> 
+         
+        <div class="homepage-hero" id="homepage"> 
+            <div class="split-left"> 
+                <div class="hero-content"> 
+                    <h1>Build Your Resume in Minutes – Tailored to You!</h1> 
+                    <p>Our Dynamic Resume Builder helps you create, customize, and download professional resumes in real time, without complicated templates or design skills.</p> 
+                    <button class="start-button" id="startButton">Start Now</button> 
+            </div> 
+            </div> 
+            <div class="split-right"> 
+                <div class="resume-preview"> 
+                    <div class="preview-card card-1"></div> 
+                    <div class="preview-card card-2"></div> 
+                    <div class="preview-card card-3"></div> 
+                </div> 
+            </div> 
+        </div> 
+
+        <div class="features-section hidden" id="featuresSection"> 
+            <div class="feature-card glass-card hidden"> 
+                <h2>Interactive Scroll Animation</h2> 
+                <p>As you scroll, each feature fades in with a short animation, making the experience dynamic and engaging.</p> 
+            </div> 
+            <div class="feature-card glass-card hidden"> 
+                <h2>Glassmorphism Style</h2> 
+                <p>A beautiful gradient background with futuristic, semi-transparent cards gives a premium and modern feel.</p> 
+            </div> 
+            <div class="feature-card glass-card hidden"> 
+                <h2>Easy to Use</h2> 
+                <p>Simply drag and drop sections to build your resume. No complicated menus or design skills required.</p> 
+            </div> 
+            <button class="start-button" id="continueButton">Continue to Builder</button> 
+        </div> 
+
+        <div class="builder hidden" id="resumeBuilder"> 
+            <div class="section-panel"> 
+                <h2>Sections</h2> 
+                <div class="section" draggable="true" data-type="objective">Objective</div> 
+                <div class="section" draggable="true" data-type="education">Education</div> 
+                <div class="section" draggable="true" data-type="skills">Skills</div> 
+                <div class="section" draggable="true" data-type="experience">Experience</div> 
+                <div class="section" draggable="true" data-type="projects">Projects</div> 
+                <div class="section" draggable="true" data-type="achievements">Achievements</div> 
+                <div class="section" draggable="true" data-type="certifications">Certifications</div> 
+                <div class="section" draggable="true" data-type="languages">Languages</div> 
+                <div class="section" draggable="true" data-type="contact">Contact</div> 
+                <button id="downloadBtn">Export Resume</button> 
+            </div> 
+            <div class="resume-area" id="resumeArea"> 
+                <div class="profile-header"> 
+                    <label for="photoUpload" class="upload-photo">Upload Photo</label> 
+                    <input type="file" id="photoUpload" accept="image/*" /> 
+                    <img id="profilePhoto" src="" alt="Profile"/> 
+                    <h1 contenteditable="true">Your Name</h1> 
+                    <h3 contenteditable="true">Web Developer/Your Role</h3> 
+                </div> 
+                <p class="drop-hint">Drag sections here</p> 
+            </div> 
+        </div> 
+        <script src="script.js"></script> 
+    </body> 
+</html>
